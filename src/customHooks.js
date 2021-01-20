@@ -4,7 +4,7 @@ import { useEffect, useCallback, useRef } from 'react';
 export const useFetch = (data, dispatch) => {
   useEffect(() => {
     dispatch({ type: 'FETCHING_IMAGES', fetching: true })
-    fetch(`https://hp-api.herokuapp.com/api/characters?page=${data.page}&limit=10`)
+    fetch(`https://run.mocky.io/v3/d891cb43-2ff8-486f-ba0a-08616a5238d6?page=${data.page}&limit=10`)
     // fetch(`https://xkcd.com/614/info.0.json?page=${data.page}&limit=10`)
       .then(data => data.json())
       .then(images => {
